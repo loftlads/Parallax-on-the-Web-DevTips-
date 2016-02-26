@@ -24,11 +24,10 @@ $(window).scroll(function(){
   // Landing Elements
   if(wScroll > $('.clothes-pics').offset().top - ($(window).height() / 1.2)) {
 
-    $('.clothes-pics figure').each(function(i){
+    $('.clothes-pics figure').each(function(){
 
       setTimeout(function(){
-        $('.clothes-pics figure').eq(i).addClass('is-showing');
-      }, (700 * (Math.exp(i * 0.14))) - 700);
+        $('.clothes-pics figure').delay(150).addClass('is-showing');
     });
 
   }
